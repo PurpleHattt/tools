@@ -1,2 +1,2 @@
 # applications.py
-Automatic of best tools for hacking. 
+Automatic installation of best tools for hacking. 
