@@ -31,7 +31,7 @@ for ut in ut_list:
     is_utility_inst(ut)
 
 
-os.system('apt update; apt upgrade -y; apt autoclean -y')
+os.system('apt update; apt upgrade -y; apt install python3; apt install python3-pip; apt autoclean -y')
 os.system("""sudo apt update;
 sudo apt install curl gpg software-properties-common apt-transport-https; 
 curl -sSL https://packages.microsoft.com/keys/microsoft.asc | sudo apt-key add -; 
