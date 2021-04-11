@@ -26,9 +26,12 @@ def is_utility_inst(utility: str):
     return True
 
 
-ut_list = ['nmap', 'nikto', 'gobuster', 'sublist3r', 'python3-pip', 'dirb', 'whatweb', 'toilet', 'vim']
+ut_list = ['nmap', 'nikto', 'gobuster', 'sublist3r', 'python3-pip', 'dirb', 'whatweb', 'toilet', 'vim', 'snapd',]
 for ut in ut_list:
     is_utility_inst(ut)
+
+os.system('systemctl enable --now snapd apparmor')
+
 
 
 os.system('apt update; apt upgrade -y; apt install python3; apt install python3-pip; apt autoclean -y')
@@ -40,9 +43,20 @@ sudo apt update;
 sudo apt install code
  """)
 
-ut_list = ['nmap', 'nikto', 'gobuster', 'sublist3r', 'python3-pip', 'dirb', 'whatweb', 'toilet', 'vim']
-for ut in ut_list:
-    is_utility_inst(ut)
+print(Fore.BLUE)
+pycharm = (input("""Do you want to install pycharm; \nPycharm Pro; \nNo pycharm:\n
+1,2,3:
+"""))
+if pycharm == "1":
+    print("Installing Pycharm basic")
+    os.system('sudo snap install pycharm-community --clasic')
+elif pycharm == "2": 
+    print('installing Pycharm Pro')
+    os.system('sudo snap install pycharm-professional --classic')
+elif pycharm == "3": 
+    print('NOT installing pycharm')
+print(Fore.RESET)
+
 
 i = (input("Do you want to reboot now? y/n:\n")) 
 if i == "y": 
