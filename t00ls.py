@@ -8,6 +8,9 @@ os.system('sudo apt install toilet -y')
 
 print(Fore.YELLOW)
 print('-' * 50) 
+print(Fore.GREEN)
+print('            RECON.PY   ')
+print("Made BY @PurpleHattt - Github")
 print(Fore.CYAN)
 os.system('toilet tools.py')
 print(Fore.YELLOW)
@@ -44,8 +47,8 @@ sudo apt install code
  """)
 
 print(Fore.BLUE)
-pycharm = (input("""Do you want to install pycharm; \nPycharm Pro; \nNo pycharm:\n
-1,2,3:
+pycharm = (input("""1.Do you want to install pycharm: \n2.Pycharm Pro: \n3.No pycharm:\n
+1.\n2.\n3.\n
 """))
 if pycharm == "1":
     print("Installing Pycharm basic")
@@ -56,7 +59,15 @@ elif pycharm == "2":
 elif pycharm == "3": 
     print('NOT installing pycharm')
 print(Fore.RESET)
+if pycharm == "1": 
+    print("Pycharm basic")
+elif pycharm == "2":
+    print("Pycharm Pro")
 
+
+
+
+print('T00ls installed: ' + str(ut_list))
 
 i = (input("Do you want to reboot now? y/n:\n")) 
 if i == "y": 
